@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final Payment</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="jquery-3.5.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="checkout.js"></script>
+    <script>
+      function showCardInfo() {
+        if (document.getElementById('paymentOption').checked) {
+          document.getElementById('cardInformation').style.display='none';
+        }  else {
+          document.getElementById('cardInformation').style.display='block';
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <header>
+    </header>
+
+    <div class="navTop1">
+      <div class="navTopLef">
+        <a href="menu.html">Menu</a>
+        
+        <a href="checkout.html">Payment</a>
+        <a href="information.html">View Cart</a>
+      </div>
+      <div class="navTopCenterInPage">
+          <img class= "logo" src="logo.png" alt="">
+      </div>
+      <div class="loginbtn">
+        <button type="submit" class="login-btn" onclick="window.location.href='index.html'">Logout!</button>
+      </div>     
+    </div>
+    <div class="content">
+      <div id="wrapper">
+          <div id="content">
+              <h2> Select a time for us to begin working on your order</h2>
+              <input type="radio" id="asap" name="selectTime" value="ASAP">
+              <label for="asap">ASAP</label>
+              <input type="radio" id="15" name="selectTime" value="15">
+              <label for="15">15 Minutes</label>
+              <input type="radio" id="30" name="selectTime" value="30">
+              <label for="30">30 Minutes</label>
+              <input type="radio" id="45" name="selectTime" value="45">
+              <label for="45">45 Minutes</label>
+              <input type="radio" id="hour" name="selectTime" value="60">
+              <label for="hour">1 Hour</label>
+    
+    <div class="userinformation">
+      <h3>Customer Information</h3>
+    <input id="cusName" type="text"name="name" placeholder="First Last">
+    <input id="cusAddr" type="text"name="address" placeholder="Enter Address">
+    <input id="cusCity" type="text" name="city" placeholder="Enter City">
+    <input id="cusState" type="text" name="state" placeholder="Enter State">
+    <input id="cusZipcode" type="text" name="zipcode" placeholder="Enter Zipcode">
+
+
+    <div class="option">
+      <h2 style="color:rgb(21, 255, 0);">Only cash on delivery is possible as of now ! </h26>
+      <h2> Pay with Cash or Card</h2>
+      <input type="checkbox" id="paymentOption" onclick="showCardInfo()">
+    
+      <label for="paymentOption">Pay with cash upon arrival</label>
+    </div>
+
+    <div id="cartContent" class="container-foods">
+        <div class="food-header">
+            <h3 class="food-title">PRODUCT</h3>
+            <h3 class="foodPrice sm-hide">PRICE</h3>
+        </div>
+    </div>
+
+    <input type="text" id="deliveryNote" name="note" placeholder="Any special instruction for delivery driver">
+    <br>
+    <div id="totalPrice">
+    </div>
+    <input type="submit" value="Submit Checkout" onclick="checkOut();">
+    </div>     
+  </div>
+    
+
+  </body>
+</html>

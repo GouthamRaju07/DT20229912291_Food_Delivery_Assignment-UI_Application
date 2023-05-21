@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Cart</title>
+    <link rel="stylesheet" href="style1.css"> <!--Styles-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="session.js"></script>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <!--Navigation Set-up-->
+    <div class="navTop1">
+            <div class="navTopLef">
+                <a href="menu.html">Menu</a>
+                
+                <a href="checkout.html">Payment</a>
+                <a href="information.html">View Cart</a>
+            </div>
+            <div class="navTopCenterInPage">
+                <img class= "logo" src="logo.png" alt="">
+            </div>
+            <div class="loginbtn">
+                <button type="submit" class="login-btn" onclick="window.location.href='index.html'">LogOut</button>
+              </div>              
+    </div>
+    <div class="content">
+        <div id="wrapper">
+            <div id="content">
+                <h1><strong><div id="userInfo"></div></strong></h2>
+                <h2><div id="userPoint"></div></h2>
+                <div class ="inforpage">
+                    <h2>Change Password</h3>
+                    <label for="psw"><b>New Password</b></label>
+                    <input id="psw1" type="password" placeholder="Enter your new password"name="psw1" required>
+                    <label for="psw"><b>Confirm Password</b></label>
+                    <input id="psw2" type="password" placeholder="Confirm you new password" name="psw2" required>
+
+                    <h2>Change Address</h3>
+                    <label for="psw"><b>New Address</b></label></br>
+                    <p>Address: <input id="newAddress"  type="text" placeholder="Enter Address"name="Address" required>
+                     City: <input id="newCity" type="text" placeholder="Enter City"name="City" required>
+                     State: <input id="newState" type="text" placeholder="Enter State"name="State" required>
+                     Zipcode: <input id="newZipcode" type="text" placeholder="Enter Zipcode"name="Zipcode" required></p>
+                    </br>
+                </div>
+                <button class="UserInformationPage-form-btn" onclick="getChange();">
+                    <span>
+                        <b>Send</b>
+                    </span>
+                </button>
+                <table class="hoverTable" id="orderFoods">
+                <tr>
+                    <th>Order ID</th>
+                    <th>Food Items</th>
+                    <th>Payment Method</th>
+                    <th>Delivery Note</th>
+                    <th>Total Price</th>
+                    <th>Delivery Time</th>          
+                </tr>
+
+            </table>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
